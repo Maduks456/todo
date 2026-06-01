@@ -9,8 +9,9 @@ use Illuminate\Database\Eloquent\Attributes\Hidden;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
-#[Fillable(['name', 'email', 'password'])]
+#[Fillable(['first_name','last_name','email', 'password'])]
 #[Hidden(['password', 'remember_token'])]
 class User extends Authenticatable
 {
@@ -22,6 +23,15 @@ class User extends Authenticatable
      *
      * @return array<string, string>
      */
+    
+    public function todos(): HasMany
+    {
+        return $this->hasMany(ToDo::class)->chaperone();
+    }
+    public function diaries(): HasMany
+    {
+        return $this->hasMany(Diary::class)->chaperone();
+    }
     protected function casts(): array
     {
         return [
