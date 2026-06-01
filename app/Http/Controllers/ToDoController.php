@@ -11,7 +11,11 @@ class ToDoController extends Controller
         return view("todos.index", compact("todos"));
     }
     public function show(ToDo $todo) {
-        return view("todos.show", compact("todo"));
+        if(Auth::user()->id== $todo->id){
+            return view("todos.show", compact("todo"));
+        }
+        return back();
+        
     }
     public function create(){
         return view('todos.create');
