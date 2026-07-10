@@ -60,8 +60,8 @@ return [
             'strict' => true,
             'engine' => null,
             'options' => extension_loaded('pdo_mysql') ? array_filter([
-                PDO::MYSQL_ATTR_SSL_CA => base_path('storage/aiven-ca.pem'),
-                PDO::MYSQL_ATTR_SSL_VERIFY_SERVER_CERT => false,
+                (class_exists('Pdo\Mysql') ? \Pdo\Mysql::ATTR_SSL_CA : PDO::MYSQL_ATTR_SSL_CA) => base_path('storage/aiven-ca.pem'),
+                (class_exists('Pdo\Mysql') ? \Pdo\Mysql::ATTR_SSL_VERIFY_SERVER_CERT : PDO::MYSQL_ATTR_SSL_VERIFY_SERVER_CERT) => false,
             ]) : [],
         ],
 
