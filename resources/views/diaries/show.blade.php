@@ -12,7 +12,7 @@
         @csrf
         @method("DELETE")
         <button>
-            Dzēst
+            Delete
         </button>
     </form>
 </x-layout>

@@ -1,8 +1,8 @@
 <x-layout>
     <x-slot:title>
-        Visi veicamie darbi
+        All Todo Tasks
     </x-slot:title>
-    <h1>Visi veicamie uzdevumi</h1>
+    <h1>All Todo Tasks</h1>
     <ul>
         @foreach (Auth::user()->todos as $todo) 
             <li><a href="/todos/{{ $todo->id }}">{{ $todo->content }}</a></li>

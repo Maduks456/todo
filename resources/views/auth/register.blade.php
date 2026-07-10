@@ -1,5 +1,8 @@
-
-    <h1>Reģistrēties</h1>
+<x-layout>
+    <x-slot:title>
+        Register
+    </x-slot:title>
+    <h1>Register</h1>
     <form method="POST">
         @csrf
         @if ($errors->any())
@@ -9,10 +12,11 @@
                 @endforeach
             </ul>
         @endif
-        <label>Vards: <input name="first_name" required></label><br>
-        <label>Uzvards: <input name="last_name" required></label><br>
+        <label>Name: <input name="first_name" required></label><br>
+        <label>Surname: <input name="last_name" required></label><br>
         <label>Email: <input type="email" name="email" required></label><br>
         <label>Password: <input type="password" name="password" required></label><br>
         <label>Conferm Password: <input type="password" name="password_confirmation" required></label><br>
-        <button>Saglabāt</button>
+        <button>Register</button>
     </form>
+</x-layout>

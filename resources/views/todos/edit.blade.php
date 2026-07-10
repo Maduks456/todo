@@ -1,6 +1,6 @@
 <x-layout>
-    <x-slot:title>{{ $todo->content}} edit</x-slot:title>
-    <h1>{{ $todo->content}} edit</h1>
+    <x-slot:title>{{ $todo->content}} Edit</x-slot:title>
+    <h1>{{ $todo->content}} Edit</h1>
     <form action="/todos/{{ $todo->id }}" method="POST">
         @csrf
         @method('PUT')
@@ -11,7 +11,7 @@
             <p>{{ $message }}</p>
         @enderror
         <label>
-            Izpildīts: 
+            Completed: 
             <input name="completed" type="hidden" value="0">
             <input name="completed" type="checkbox" value="1" {{ old("completed", $todo->completed) ? 'checked' : '' }}>   
         </label>
@@ -19,6 +19,6 @@
             <p>{{ $message }}</p>
         @enderror
              
-        <button>Saglabāt</button>
+        <button>Save Changes</button>
     </form>
 </x-layout>

@@ -1,6 +1,6 @@
 <x-layout>
-    <x-slot:title>{{ $diary->title}} edit</x-slot:title>
-    <h1>{{ $diary->title}} edit</h1>
+    <x-slot:title>{{ $diary->title}} Edit</x-slot:title>
+    <h1>{{ $diary->title}} Edit</h1>
     <form action="/diaries/{{ $diary->id }}" method="POST">
         @csrf
         @method('PUT')
@@ -22,6 +22,6 @@
         @error("date")
             <p>{{ $message }}</p>
         @enderror
-        <button>Saglabāt</button>
+        <button>Save Changes</button>
     </form>
 </x-layout>
