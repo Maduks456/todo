@@ -1,8 +1,8 @@
-
-@auth
 <x-layout>
+@auth
+
     <h1>Hello {{ Auth::user()->first_name}}</h1>
-</x-layout>
+
 @endauth
 @guest
   <p>Hello, guest!</p>
@@ -17,3 +17,4 @@
     </button>
   </a>
 @endguest
+</x-layout>
