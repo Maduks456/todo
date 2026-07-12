@@ -16,10 +16,12 @@
         Createing/editing/deleting Diary
     </li>
 </ul>
+
 ## Demo Site
 <p>
     you can see the example page here -> https://todo-nu-black-86.vercel.app
 </p>
+
 ## AI Usage
 <p>
     Whilst creating, AI was used to help with placeing the project on vercel.
