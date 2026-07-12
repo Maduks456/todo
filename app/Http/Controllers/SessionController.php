@@ -20,7 +20,7 @@ class SessionController extends Controller
         ]);
         if (!Auth::attempt($validated)) {
             throw ValidationException::withMessages([
-                "email" => "Nepareiz e-pasts vai parole"
+                "email" => "Wrong password or email"
             ]);
         }
         $request->session()->regenerate();
