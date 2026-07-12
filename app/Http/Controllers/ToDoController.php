@@ -11,7 +11,7 @@ class ToDoController extends Controller
         return view("todos.index", compact("todos"));
     }
     public function show(ToDo $todo) {
-        if(Auth::user()->id== $todo->id){
+        if(Auth::user()->id == $todo->user_id){
             return view("todos.show", compact("todo"));
         }
         return back();

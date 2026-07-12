@@ -1,7 +1,11 @@
 
 @auth
 <x-layout>
-    <h1>Hello {{ Auth::user()->first_name}}</h1>
+  <div class="box">
+    <div class="box_title">
+      <h1>Hello {{ Auth::user()->first_name}}</h1>
+    </div>
+  </div>
 </x-layout>
 @endauth
 @guest
@@ -14,17 +18,27 @@
       <title>{{$title ?? "Guest page"}}</title>
   </head>
   <body>
-    <p>Hello, guest!</p>
-    <a href="/login">
-      <button>
-        Login
-      </button>
-    </a>
-    <a href="/register">
-      <button>
-        Register
-      </button>
-    </a>
+    <div class="box">
+      <div class="box_title">
+        <h1>Hello, guest!</h1>
+      </div>
+      <div class="box_logreg">
+        <div class="box_buttons_logreg">
+          <a href="/login">
+            <button class="button_logreg">
+              Login
+            </button>
+          </a>
+        </div>
+        <div class="box_buttons_logreg">
+          <a href="/register">
+            <button class="button_logreg">
+              Register
+            </button>
+          </a>
+        </div>
+      </div>
+    </div> 
   </body>
 </html>
 @endguest

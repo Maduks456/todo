@@ -12,7 +12,7 @@ class DiaryController extends Controller
         return view("diaries.index", compact("diaries"));
     }
     public function show(Diary $diary){
-        if(Auth::user()->id== $diary->id){
+        if(Auth::user()->id== $diary->user_id){
             return view("diaries.show", compact("diary"));
         }
         return back();
