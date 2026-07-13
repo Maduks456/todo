@@ -15,6 +15,9 @@
     <li>
         Createing/editing/deleting Diary
     </li>
+    <li>
+        To mark a task done or not done you need to check the box thats has the text "Is the task completed" next to it  in the edit page
+    </li>
 </ul>
 
 ## Demo Site
