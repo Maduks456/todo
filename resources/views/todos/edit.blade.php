@@ -24,7 +24,7 @@
                     </label>
                     
                     <label>
-                        Is the task completed (Check the box if yes):
+                        Is the task completed:
                         <input name="completed" type="hidden" value="0">
                         <input name="completed" type="checkbox" value="1" {{ old("completed", $todo->completed) ? 'checked' : '' }}>   
                     </label>
