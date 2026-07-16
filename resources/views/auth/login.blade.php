@@ -23,7 +23,7 @@
                         @endif
             </div>
             <div class="box_logreg_inputbox">
-                    <label>Email: <input type="email" name="email" required></label><br>
+                    <label>Email: <input type="email" name="email" value="{{old('email')}}"required></label><br>
                     <label>Password: <input type="password" name="password" required></label><br>
             </div>
             <div class="line"></div>
