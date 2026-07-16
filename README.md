@@ -17,9 +17,8 @@
     </li>
     <li>
         To mark a task done or not done you need to check the box thats has the text "Is the task completed" next to it  in the edit page
-        <img width="1099" height="760" alt="image" src="https://github.com/user-attachments/assets/f7757740-b9ae-4c9c-828b-705444eefeae" />
-
     </li>
+    <img width="1099" height="760" alt="image" src="https://github.com/user-attachments/assets/f7757740-b9ae-4c9c-828b-705444eefeae" />
 </ul>
 
 ## Demo Site
