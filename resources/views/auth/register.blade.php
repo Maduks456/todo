@@ -26,7 +26,7 @@
                 <label>Surname: <input name="last_name" value="{{old('last_name')}}"required></label><br>
                 <label>Email: <input type="email" name="email" value="{{old('email')}}"required></label><br>
                 <label>Password: <input type="password" name="password" required></label><br>
-                <label>Conferm Password: <input type="password" name="password_confirmation" required></label><br>
+                <label>Confirm Password: <input type="password" name="password_confirmation" required></label><br>
             </div>
             <div class="line"></div>
             <div class="box_logreg_inputbox">
